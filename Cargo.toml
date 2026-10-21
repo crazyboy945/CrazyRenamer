@@ -1,0 +1,25 @@
+[package]
+name = "batch-renamer"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "CrazyRenamer"
+path = "src/main.rs"
+
+[dependencies]
+eframe = { version = "0.37", default-features = false, features = ["glow", "default_fonts", "clipboard"] }
+regex = "1"
+rfd = { version = "0.15", default-features = false }
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_System_Com",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Ole",
+    "Win32_System_Threading",
+    "Win32_System_SystemInformation",
+    "Win32_System_Variant",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
